@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuard - Government Schemes for Farmers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header class="bg-green-700 text-white shadow-lg p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl font-bold rounded-md py-1 px-3">Farmer Schemes</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="dashboard.html" class="hover:text-green-200 transition duration-300">Home</a></li>
+                    <li><a href="dashboard.html" id="backButton"
+                            class="hover:text-green-200 transition duration-300">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+        <div class="container mx-auto my-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-green-700 mb-8 animate-pulse">Government Schemes for Farmers
+            </h1>
+            <p class="text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+                Discover and access various government schemes designed to support farmers, enhance agricultural
+                productivity, and improve livelihoods.
+            </p>
+
+            <div id="schemesList" class="space-y-8">
+
+                <h2 class="text-3xl font-bold text-green-800 mb-6 text-center" id="centralSchemesHeader">Central
+                    Government Schemes</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Pradhan Mantri Kisan Samman Nidhi
+                            (PM-KISAN)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Direct income support of ₹6,000 per
+                            year to landholding farmer families.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Landholding farmer families across
+                            India.</p>
+                        <p class="text-gray-700 mb-4 text-sm"><strong>Details:</strong> Disbursed in three equal
+                            installments of ₹2,000. Requires eKYC and Aadhaar-bank linking.</p>
+                        <a href="https://pmkisan.gov.in/" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Kisan Credit Card (KCC) Scheme</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Provide timely and adequate credit
+                            support for cultivation and other agricultural needs.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Individual farmers, SHGs, JLGs
+                            (including tenant farmers and sharecroppers).</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Offers loans typically up to ₹3 lakh at
+                            low interest rates. Includes revolving cash credit and often insurance coverage.
+                        </p>
+                        <a href="https://www.jansamarth.in/kisan-credit-card-scheme" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Pradhan Mantri Fasal Bima Yojana (PMFBY)
+                        </h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Financial protection against crop
+                            loss/damage due to natural disasters, pests, and diseases.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Cultivators or sharecroppers on
+                            insured land (compulsory for loanee farmers, optional for non-loanee).</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Affordable premiums (2% Kharif, 1.5%
+                            Rabi, 5% commercial/horticultural). Covers prevented sowing, standing crop, post-harvest
+                            losses, and localized calamities.</p>
+                        <a href="https://pmfby.gov.in/" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Agriculture Infrastructure Fund (AIF)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Support creation of post-harvest
+                            management infrastructure and community farming assets.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers, agribusiness startups,
+                            rural entrepreneurs.</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Provides loans up to ₹2 crore with a 3%
+                            interest subvention for warehouses, cold storage, food processing units.</p>
+                        <a href="https://agriinfra.nic.in/" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">National Agriculture Market (e-NAM)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Online digital trading platform to
+                            facilitate direct selling for farmers and FPOs.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers and Farmer Producer
+                            Organizations (FPOs).</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Aims to eliminate middlemen and ensure
+                            better, more transparent pricing for crops.</p>
+                        <a href="https://www.enam.gov.in/" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Paramparagat Krishi Vikas Yojana (PKVY)
+                        </h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Comprehensive support for organic
+                            farmers from production to marketing in a cluster-based approach.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Organic farmer clusters (min. 20
+                            farmers over 50 acres).</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Encourages sustainable organic farming,
+                            provides subsidies for organic raw materials, bio-fertilizers, and certification fees up to
+                            ₹50,000 per hectare.</p>
+                        <a href="https://pgsindia.gov.in/pkvy.aspx" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">National Food Security Mission (NFSM)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Increase production of essential crops
+                            (rice, wheat, pulses, coarse cereals) to ensure food security.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers of all categories (small,
+                            marginal, and large-scale).</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Provides financial and technical support
+                            for high-quality seeds, fertilizers, irrigation, soil health, and eco-friendly practices.
+                        </p>
+                        <a href="https://nfsm.gov.in/" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Sub-Mission on Agricultural Mechanization
+                            (SMAM)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Provide subsidies on essential
+                            agricultural machinery to improve productivity.</p>
+                        <p class="text-700 mb-2"><strong>Beneficiaries:</strong> Farmers.</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Offers subsidies on tractors,
+                            harvesters, and other planting machinery.</p>
+                        <a href="https://farmech.dac.gov.in/SMAM.aspx" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="all">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Rashtriya Krishi Vikas Yojana (RKVY)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Financial assistance and grants for
+                            purchasing advanced farm equipment and construction.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers.</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Fosters India's agricultural economy
+                            through mechanization and infrastructure development.</p>
+                        <a href="https://rkvy.nic.in/" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                </div>
+
+                <h2 class="text-3xl font-bold text-green-800 mb-6 text-center mt-12" id="stateSchemesHeader">
+                    State-Specific Schemes</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="scheme-card card p-6" data-state="madhya_pradesh">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Mukhya Mantri Kisan Kalyan Yojana (Madhya
+                            Pradesh)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Provides direct financial assistance
+                            to farmers.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers in Madhya Pradesh.
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Often supplements the central
+                            government's PM-KISAN scheme.</p>
+                        <a href="https://mp.gov.in/web/guest/schemes" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="madhya_pradesh">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Bhavantar Bhugtan Yojana (Madhya Pradesh)
+                        </h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Price deficiency payment scheme to
+                            protect farmers from market price fluctuations.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers in Madhya Pradesh.
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Compensates farmers when market prices
+                            fall below a predetermined support price.</p>
+                        <a href="https://mp.gov.in/web/guest/schemes" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="madhya_pradesh">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Mukhya Mantri Krishi Sinchai Yojana
+                            (Madhya Pradesh)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Expand irrigation facilities and
+                            promote water conservation.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Farmers in Madhya Pradesh. [13]
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Aims to bring more land under irrigation
+                            by creating new projects and renovating existing ones.</p>
+                        <a href="https://mp.gov.in/web/guest/schemes" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+
+                    <div class="scheme-card card p-6" data-state="madhya_pradesh">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Mukhyamantri Machhua Samridhi Yojana
+                            (Madhya Pradesh)</h3>
+                        <p class="text-gray-700 mb-2"><strong>Objective:</strong> Invest in aquaculture, fish trade
+                            infrastructure, and skill development.</p>
+                        <p class="text-gray-700 mb-2"><strong>Beneficiaries:</strong> Fishing community in Madhya
+                            Pradesh.</p>
+                        <p class="text-gray-700 mb-2"><strong>Details:</strong> Supports livelihood improvement for the
+                            fishing community.</p>
+                        <a href="https://mp.gov.in/web/guest/schemes" target="_blank"
+                            class="inline-block bg-green-500 text-white py-2 px-4 rounded-full text-sm hover:bg-green-600 transition duration-300">Learn
+                            More & Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm">&copy; <span id="current-year"></span> AgroGuard. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="templates/js/schemes.js"></script>
+</body>
+
+</html>

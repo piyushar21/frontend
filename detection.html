@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuard AI Disease Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templates/css/detection.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header class="bg-green-700 text-white shadow-lg p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl font-bold rounded-md py-1 px-3">AI Detection</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="dashboard.html" class="hover:text-green-200 transition duration-300">Home</a></li>
+                    <li><a href="#" id="backButton" class="hover:text-green-200 transition duration-300">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="container card mx-auto">
+            <h1 class="text-center text-green-600 text-4xl md:text-6xl font-extrabold mb-6 animate-pulse">AI Crop Disease Detection</h1>
+
+            <div class="mb-8">
+                <label for="imageUpload" class="custom-file-upload flex flex-col items-center justify-center">
+                    <svg class="w-16 h-16 text-gray-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 12h-2v3h-3v2h3v3h2v-3h3v-2h-3zM4 6h7c1.1 0 2-.9 2-2s-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7h-2v11H4V6zm0-2v14H2V4h2z" />
+                    </svg>
+                    <span class="text-gray-600 text-lg font-semibold">Click to upload an image of your plant</span>
+                    <span class="text-gray-500 text-sm mt-1">(e.g., affected leaf, stem)</span>
+                    <input type="file" id="imageUpload" accept="image/*" class="hidden">
+                </label>
+                <div id="imagePreview"
+                    class="mt-6 hidden flex justify-center border border-gray-300 rounded-lg p-2 bg-gray-50">
+                    <img src="#" alt="Image Preview" class="max-w-full h-auto max-h-64 rounded-md object-contain">
+                </div>
+            </div>
+
+
+            <div class="text-center mb-8">
+                <button id="detectButton"
+                    class="bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-700 hover:scale-105 transition-transform duration-300 ease-in-out flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled>
+                    <span id="buttonText">Detect Disease</span>
+                    <svg id="loadingSpinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+            <div id="resultsSection" class="mt-8 p-6 bg-gray-50 rounded-xl border border-gray-200 hidden">
+                <h2 class="text-2xl font-semibold text-green-700 mb-4 text-center">Detection Results</h2>
+                <p class="text-lg text-gray-800 mb-2"><strong class="text-green-600">Predicted Disease:</strong> <span
+                        id="diseaseName" class="font-medium">N/A</span></p>
+                <p class="text-lg text-gray-800 mb-4"><strong class="text-green-600">Confidence Score:</strong> <span
+                        id="confidenceScore" class="font-medium">N/A</span></p>
+                <p class="text-gray-700 text-sm italic" id="recommendation">
+
+                </p>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm">&copy; <span id="current-year"></span> AgroGuard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="templates/js/detection.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuard - Preventive Advisory System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templates/css/advisory.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header class="bg-green-700 text-white shadow-lg p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl font-bold rounded-md py-1 px-3">Advisory System</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="dashboard.html" class="hover:text-green-200 transition duration-300">Home</a></li>
+                    <li><a href="#" id="backButton" class="hover:text-green-200 transition duration-300">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+        <div class="container mx-auto my-8">
+            <h1 class="text-center text-green-600 text-4xl md:text-6xl font-extrabold mb-6 animate-pulse">Preventive Advisory System</h1>
+            <p class="text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+                Shift from reactive disease management to proactive prevention. Our AI-powered system anticipates
+                outbreaks,
+                empowering you to protect your crops before visible symptoms appear.
+            </p>
+
+            <div class="space-y-16">
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 flex items-center">
+                        <svg class="w-8 h-8 mr-3 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg>
+                        AI-Driven Predictive Analytics
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The core strength of the Preventive Advisory System lies in its sophisticated AI model. Unlike
+                        traditional reactive approaches, this AI does not merely identify existing problems; it
+                        continuously learns and proactively anticipates potential threats. It achieves this by
+                        meticulously analyzing vast amounts of historical disease data, including past outbreak records,
+                        detailed symptom progression, and the associated environmental conditions under which these
+                        outbreaks occurred. This comprehensive historical context forms the foundation of its predictive
+                        power.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        The AI employs advanced machine learning algorithms to identify complex, often subtle, patterns
+                        and correlations within this extensive historical dataset that are typically imperceptible to
+                        human observation. By understanding the intricate dynamics of how diseases have emerged and
+                        spread in the past under specific environmental and temporal conditions, the AI develops a
+                        profound predictive understanding of future risks. This learning process is continuous, allowing
+                        the model to adapt and improve over time as more data is collected. The ultimate goal of this
+                        AI-driven analysis is to provide "early warnings".
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 flex items-center">
+                        <svg class="w-8 h-8 mr-3 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.77 9.23A2.99 2.99 0 0015 9h-1V6a2 2 0 00-2-2c-1.1 0-2.9-2 2v3h-1a2.99 2.99 0 00-2.77 3.73L6 16h12l-1.23-2.77z" />
+                        </svg>
+                        Seamless Weather Integration: Your Farm's Crystal Ball
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A critical component of the Preventive Advisory System's predictive accuracy is its seamless
+                        integration of real-time and forecasted weather data. This encompasses a comprehensive range of
+                        meteorological parameters, including ambient temperature, relative humidity, precipitation
+                        levels, and wind speed. This dynamic data fusion ensures that the AI model operates with the
+                        most current environmental context.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Weather conditions are frequently the primary environmental triggers and accelerators for
+                        disease development and spread. By intelligently combining historical disease patterns (learned
+                        by the AI) with current and anticipated weather conditions, AgroGuard's AI can precisely assess
+                        the environmental favorability for specific pathogens. This deep integration allows AgroGuard to
+                        anticipate and alert farmers to environmental triggers for outbreaks days or even weeks in
+                        advance.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 flex items-center">
+                        <svg class="w-8 h-8 mr-3 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6V9c0-3.07-1.63-5.64-4.5-6.32V2.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.18C7.63 3.36 6 5.93 6 9v7l-2 2v1h16v-1l-2-2z" />
+                        </svg>
+                        Proactive Alert Mechanisms: Timely Action, Real Results
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        AgroGuard is designed to ensure that farmers receive critical advisories and early warnings
+                        through their most convenient and preferred communication channels. This includes instant SMS
+                        messages, intuitive in-app notifications within the AgroGuard mobile application, and detailed
+                        email alerts. This multi-channel strategy maximizes reach and ensures timely delivery, which is
+                        particularly vital for farmers operating in remote agricultural areas where internet
+                        connectivity might be inconsistent or unreliable.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        To prevent alert fatigue and ensure the relevance of advisories, farmers have the flexibility to
+                        customize their alert thresholds and preferences. Each alert is meticulously crafted to be
+                        clear, concise, and immediately actionable, providing practical, step-by-step guidance on
+                        potential preventive measures. These alerts can seamlessly link directly to the AgroGuard
+                        Marketplace, enabling farmers to quickly identify and procure any necessary agri-chemicals or
+                        biofertilizers.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 flex items-center">
+                        <svg class="w-8 h-8 mr-3 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.7-7 8.99V12H5V6.3l7-3.11v8.8z" />
+                        </svg>
+                        Benefits for Farmers: Cultivating Success
+                    </h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-3 pl-4">
+                        <li>
+                            <strong class="text-green-600">Reduced Crop Loss & Increased Yields:</strong> By enabling
+                            early detection and proactive intervention, the system significantly mitigates the impact of
+                            diseases, preserving harvest quality and quantity, leading to higher yields and greater
+                            profitability.
+                        </li>
+                        <li>
+                            <strong class="text-green-600">Optimized Resource Use:</strong> Proactive disease management
+                            means farmers can apply pesticides, fungicides, or fertilizers precisely when and where they
+                            are needed, reducing wasteful application of expensive inputs and minimizing environmental
+                            impact.
+                        </li>
+                        <li>
+                            <strong class="text-green-600">Time & Cost Savings:</strong> Averting severe disease
+                            outbreaks translates directly into less time and labor spent on managing damaged crops and
+                            applying reactive treatments, allowing farmers to allocate resources to other critical
+                            aspects of farm management.
+                        </li>
+                        <li>
+                            <strong class="text-green-600">Environmental Sustainability:</strong> By advocating for
+                            targeted interventions and reducing overall reliance on broad-spectrum chemical
+                            applications, AgroGuard actively supports environmentally responsible and sustainable
+                            agricultural practices.
+                        </li>
+                        <li>
+                            <strong class="text-green-600">Empowered Decision-Making:</strong> Farmers gain access to
+                            AI-driven insights that provide a deeper understanding of disease risks and optimal
+                            preventive strategies, empowering them to make more informed, data-backed decisions.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 text-center">Key Features & Benefits Summary
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                            <thead>
+                                <tr class="bg-green-100 text-green-800">
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-semibold uppercase tracking-wider border-b border-gray-200">
+                                        Feature</th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-semibold uppercase tracking-wider border-b border-gray-200">
+                                        Description</th>
+                                    <th
+                                        class="py-3 px-4 text-left text-sm font-semibold uppercase tracking-wider border-b border-gray-200">
+                                        Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200"><strong>AI-Driven Predictive
+                                            Analytics</strong></td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Utilizes advanced AI models to learn
+                                        from historical disease and environmental data, forecasting potential outbreaks
+                                        before they occur.</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Enables proactive prevention,
+                                        significantly reducing the risk and impact of crop diseases.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4 border-b border-gray-200"><strong>Seamless Weather
+                                            Integration</strong></td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Combines real-time and forecasted
+                                        weather data with AI models to provide context-aware predictions.</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Delivers highly accurate,
+                                        environmentally contextualized predictions; provides early warning of critical
+                                        environmental triggers for disease.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200"><strong>Proactive Alert
+                                            Mechanisms</strong></td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Delivers timely advisories through
+                                        multiple channels (SMS, in-app notifications, email), with customizable
+                                        preferences.</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Ensures farmers receive critical,
+                                        actionable guidance promptly, enabling swift intervention and preventing
+                                        widespread damage.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="py-3 px-4 border-b border-gray-200"><strong>Optimized Resource
+                                            Use</strong></td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Guides precise application of
+                                        agri-chemicals and biofertilizers based on predictive insights.</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">Leads to substantial cost savings on
+                                        inputs and promotes more sustainable, environmentally friendly farming
+                                        practices.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Reduced Crop Loss & Increased Yields</strong></td>
+                                    <td class="py-3 px-4">Empowers farmers to intervene preventively, avoiding severe
+                                        disease outbreaks and protecting crops.</td>
+                                    <td class="py-3 px-4">Preserves harvest quality and quantity, directly contributing
+                                        to higher yields and increased farm profitability.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm">&copy; <span id="current-year"></span> AgroGuard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="templates/js/advisory.js"></script>
+</body>
+
+</html>

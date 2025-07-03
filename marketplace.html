@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuard Marketplace - Buy & Sell Farm Products</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templates/css/market.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-green-700 text-white shadow-lg p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl font-bold rounded-md py-1 px-3">AgroGuard Marketplace</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="dashboard.html" class="hover:text-green-200 transition duration-300">Home</a></li>
+                    <li><a href="#" id="backButton" class="hover:text-green-200 transition duration-300">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+        <div class="container mx-auto my-8">
+            <h1 class="text-center text-green-600 text-4xl md:text-6xl font-extrabold mb-6 animate-pulse">Farm Products Marketplace</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 text-center">Sell Your Products</h2>
+                    <p class="text-gray-700 mb-6 text-center">List your fresh produce, livestock, or agricultural tools
+                        for sale.</p>
+
+                    <form id="sellForm" class="space-y-6">
+                        <div>
+                            <label for="productName" class="block text-gray-700 text-sm font-bold mb-2">Product
+                                Name</label>
+                            <input type="text" id="productName"
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-green-500"
+                                placeholder="e.g., Organic Tomatoes, Dairy Cow, Tractor Parts" required>
+                        </div>
+                        <div>
+                            <label for="productDescription"
+                                class="block text-gray-700 text-sm font-bold mb-2">Description</label>
+                            <textarea id="productDescription" rows="4"
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-green-500"
+                                placeholder="Provide details about your product..." required></textarea>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="productPrice" class="block text-gray-700 text-sm font-bold mb-2">Price
+                                    (e.g., per Kg, per unit)</label>
+                                <input type="number" id="productPrice"
+                                    class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-green-500"
+                                    placeholder="e.g., 50.00" step="0.01" required>
+                            </div>
+                            <div>
+                                <label for="contactInfo" class="block text-gray-700 text-sm font-bold mb-2">Your Contact
+                                    Info</label>
+                                <input type="text" id="contactInfo"
+                                    class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-green-500"
+                                    placeholder="e.g., +91-XXXXXXXXXX, your@email.com" required>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-lg hover:bg-green-700 hover:scale-105 transition-transform duration-300 ease-in-out">
+                            List Product for Sale
+                        </button>
+                    </form>
+                    <div id="sellStatus" class="mt-4 text-center text-green-700 font-semibold hidden"></div>
+                </div>
+
+                <div class="card">
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6 text-center">Buy Farm Products</h2>
+                    <p class="text-gray-700 mb-6 text-center">Browse products listed by other farmers. Contact sellers
+                        directly!</p>
+                    <div id="productListings" class="space-y-6">
+                        <p class="text-center text-gray-600 italic">
+                            Loading products...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm">&copy; <span id="current-year"></span> AgroGuard. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="templates/js/market.js"></script>
+</body>
+
+</html>
