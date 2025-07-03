@@ -1,0 +1,39 @@
+/* frontend/css/market.css */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+}
+
+/* Tailwind CSS provides most of the utility classes,
+   but these custom classes from the original CSS are still useful. */
+.container {
+    max-width: 1000px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+}
+
+/* The custom-file-upload styles are no longer strictly needed
+   since the image upload section is removed.
+   You can remove these rules if you prefer to keep the CSS minimal. */
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 2px dashed #94a3b8;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-file-upload:hover {
+    background-color: #f1f5f9;
+    border-color: #64748b;
+}

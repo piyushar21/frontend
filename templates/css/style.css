@@ -1,0 +1,193 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); /* Ensure Inter font is imported */
+
+/* Basic body styling and font */
+body {
+    font-family: 'Inter', sans-serif !important; /* Added !important to ensure it overrides Tailwind's default font-sans */
+    background-color: #f8fafc; /* Light blue-gray for the body */
+    /* IMPORTANT: This ensures there's enough content to scroll and see the animation. */
+    min-height: 200vh;
+    font-size: 16px !important; /* Added !important to ensure base font size is set */
+    margin: 0;
+    padding: 0;
+}
+
+.chat-history{
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+/* Custom scrollbar for chat history */
+.chat-history::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.chat-history::-webkit-scrollbar-track {
+    background: #e2e8f0; /* Color of the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* Color of the scroll thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* Color on hover */
+}
+
+
+/* Mobile Menu Custom Styles (Adjusted for Tailwind transform) */
+.mobile-menu {
+    /* Tailwind's transform classes handle the sliding: */
+    /* .translate-y-full (default) will push it down by 100% of its height */
+    /* .translate-y-0 (active) will bring it back */
+    /* transition is already handled by Tailwind's transition-transform duration-300 */
+    /* We keep this class just for organization or if you need to add more non-tailwind specific styles */
+    /* Ensure z-index is high enough to be above other content */
+    z-index: 40; /* already set in HTML, but good to keep here for clarity */
+}
+
+/* Chatbot Specific Styles */
+.chat-input-container {
+    /* Use flexbox for the input and button */
+    display: flex;
+    align-items: center;
+    gap: 0; /* Remove any default gap that might push button out */
+}
+
+.chat-input-container input {
+    /* Ensure input takes available space */
+    flex-grow: 1; /* Allow input to grow */
+    min-width: 0; /* Prevent content from overflowing input, allows it to shrink */
+}
+
+.chat-input-container button {
+    /* Ensure button doesn't shrink or grow unexpectedly */
+    flex-shrink: 0; /* Prevent button from shrinking */
+    padding-left: 1rem; /* Adjust padding if needed to control width */
+    padding-right: 1rem;
+}
+
+
+/* Utility for chatbot container to start hidden */
+.hidden-chat-initial {
+    display: none;
+}
+
+
+/* Card Scroll Animation Styles */
+.team-card {
+    opacity: 0;
+    transform: translateY(50px); /* Start 50px below its final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.team-card.animate-in {
+    opacity: 1;
+    transform: translateY(0); /* Move to final position */
+}
+
+
+/* Default transition on body font size for smooth changes if any media queries adjust it */
+body {
+    transition: font-size 0.3s ease-in-out;
+}
+
+/* Base styles for team grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Default 250px min-width */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center grid items if they don't fill the row */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones) */
+@media (max-width: 639px) { /* Tailwind's 'sm' breakpoint is 640px */
+    .team-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media (min-width: 640px) and (max-width: 1023px) { /* Tailwind's 'md' is 768px, 'lg' is 1024px */
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+/* Large devices (laptops) */
+@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr); /* Max 3 columns for larger screens */
+        gap: 30px;
+    }
+}
+
+
+/* Chatbot Responsive Adjustments */
+@media (max-width: 450px) {
+    .fixed.bottom-4.right-4 {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-width: none; /* Remove max-width on very small screens */
+        border-radius: 0; /* No border-radius for full width */
+    }
+    .fixed.bottom-4.right-4 > div { /* The chatbot container itself */
+        width: 100%;
+        height: 100vh; /* Take full height on very small screens if needed */
+        max-height: none;
+        border-radius: 0;
+    }
+    .chat-history {
+        max-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    }
+    #chatbot-toggle {
+        display: none; /* Hide toggle button if chatbot takes full screen */
+    }
+}
+
+/* Specific orientation adjustments (if needed, these are examples) */
+
+/* Phones in Landscape (e.g., screen width >= 375px and orientation is landscape) */
+@media (min-width: 375px) and (orientation: landscape) {
+    body {
+        font-size: 15px !important; /* Slightly smaller font to fit more content on shorter screens */
+    }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* More columns, smaller cards */
+        gap: 15px; /* Smaller gap to conserve space */
+        padding: 10px;
+    }
+    .chat-history {
+        max-height: 300px; /* Shorter chat history in landscape phone */
+        width: 100%; /* Take full width */
+    }
+}
+
+/* Tablets in Landscape (e.g., screen width >= 768px and height < 1024px) */
+@media (min-width: 768px) and (max-height: 1023px) and (orientation: landscape) {
+    body {
+        font-size: 18px !important; /* Standard tablet font size */
+    }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* More items per row in landscape */
+        gap: 30px;
+    }
+    .chat-history {
+        max-height: 450px; /* Adapt height for landscape tablet */
+    }
+}
+
+/* You can add more specific orientation queries if unique layouts are needed */
